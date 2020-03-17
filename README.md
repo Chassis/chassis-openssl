@@ -69,3 +69,7 @@ Or alternatively:
 ### Other browsers / platforms
 
 Please submit pull-requests for instructions for browsers/platforms not listed above.
+
+## Contributors
+
+Props to [@javorszky](https://github.com/javorszky/) for the initial versions of the extension, and our [contributors](https://github.com/Chassis/chassis_openssl/graphs/contributors).
