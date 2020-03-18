@@ -1,3 +1,4 @@
+
 [submodule "modules/openssl"]
 	path = modules/openssl
-	url = https://github.com/roborourke/puppet-openssl
+	url = https://github.com/camptocamp/puppet-openssl.git
