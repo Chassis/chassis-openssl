@@ -5,3 +5,10 @@
 #
 # Values: 2
 version: 2
+
+# default config overwrite created certs and keys
+chassis_openssl:
+    cert:
+        replace: yes
+    key:
+        replace: yes

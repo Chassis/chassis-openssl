@@ -7,8 +7,20 @@ openSSL module as extension for chassis.io. See https://github.com/Chassis/Chass
 1. Run `vagrant reload --provision` or just `vagrant up`
 1. Profit.
 
-## Notes:
+## Optional Config
+By default the certificate and key are regenerated on subsequent `vagrant reload --provision` & `vagrant up`. Which means you would need to re-trust the certificate each time, as the certificate serial number changes.
+To configure to only create if missing, add the following to your `config.yaml`
 
+```
+# Configure ssl to keep the same cert/key
+chassis_openssl:
+    cert:
+        replace: no
+    key:
+        replace: no
+```
+
+## Notes:
 1. You also need to modify the `wp-config.php` in the root directory and modify the `WP_SITEURL` and `WP_HOME` constants to use https instead of http.
 1. Both the certificate and key are exported to `chassis/` directory, so it can be used with local dev servers, like webpack dev server.
 

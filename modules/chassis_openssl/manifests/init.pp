@@ -27,13 +27,15 @@ class chassis_openssl (
 		group        => 'www-data',
 	}
 	-> file { "/vagrant/${::fqdn}.cert":
-		ensure => present,
-		source => "/etc/ssl/certs/${::fqdn}.crt",
-		mode   => '0644',
+		ensure  => present,
+		replace => $config['chassis_openssl']['cert']['replace'],
+		source  => "/etc/ssl/certs/${::fqdn}.crt",
+		mode    => '0644',
 	}
 	-> file { "/vagrant/${::fqdn}.key":
-		ensure => present,
-		source => "/etc/ssl/certs/${::fqdn}.key",
-		mode   => '0644',
+		ensure  => present,
+		replace => $config['chassis_openssl']['key']['replace'],
+		source  => "/etc/ssl/certs/${::fqdn}.key",
+		mode    => '0644',
 	}
 }
