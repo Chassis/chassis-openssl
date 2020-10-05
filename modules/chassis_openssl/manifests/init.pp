@@ -2,7 +2,7 @@
 class chassis_openssl (
 	$config,
 ) {
-	if ( ! defined( File["/etc/nginx/sites-available/${name}.d"] ) ) {
+	if ( ! defined( File["/etc/nginx/sites-available/${::fqdn}.d"] ) ) {
 		file { "/etc/nginx/sites-available/${::fqdn}.d":
 			ensure  => directory,
 			require => Package['nginx']
