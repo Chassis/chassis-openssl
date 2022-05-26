@@ -1,4 +1,4 @@
-# chassis-openssl
+# chassis_openssl
 openSSL module as extension for chassis.io. See https://github.com/Chassis/Chassis and http://docs.chassis.io/en/latest/ for a lot more info.
 
 ## Usage
